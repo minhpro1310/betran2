@@ -4,8 +4,18 @@
         <title>
             Tiêu Kim Trân
         </title>
+        <script type="text/javascript">
+    function DetectTheThing()
+    {
+       var uagent = navigator.userAgent.toLowerCase();
+       if (uagent.search("iphone") > -1 || uagent.search("ipad") > -1 
+       || uagent.search("android") > -1 || uagent.search("blackberry") > -1
+       || uagent.search("webos") > -1)
+          window.location.href ="./mobile";
+    }
+</script>
     </head>
-    <body>
+    <body onload="DetectTheThing()">
         <div id="infoarea">
             <div id="if2">
         <h3>
