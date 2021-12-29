@@ -1,34 +1,19 @@
-<html>
-    <head>
-        <title>Mobile Detection</title>
-    </head>
-    <body>
-    </body>
-</html>
-<script>
- 
-if(navigator.userAgent.match(/iPad/i)){
-location.href="/ipad.html";
-}
- 
-if(navigator.userAgent.match(/iPhone/i)){
- location.href="/m-iphone.html";
-}
- 
- 
-if(navigator.userAgent.match(/Android/i)){
- location.href="/mobile.html"
-}
- 
- 
- 
-if(navigator.userAgent.match(/BlackBerry/i)){
- //code for BlackBerry here 
-}
- 
- 
-if(navigator.userAgent.match(/webOS/i)){
- //code for webOS here 
-}
-
+<head>
+<script type="text/javascript">
+    function DetectTheThing()
+    {
+       var uagent = navigator.userAgent.toLowerCase();
+       if (uagent.search("iphone") > -1 || uagent.search("ipad") > -1 
+       || uagent.search("android") > -1 || uagent.search("blackberry") > -1
+       || uagent.search("webos") > -1)
+          window.location.href ="otherindex.html";
+    }
 </script>
+ 
+</head>
+ 
+<body onload="DetectTheThing()">
+VIEW NORMAL SITE
+</body>
+ 
+</html>
